@@ -7,7 +7,9 @@ import Tabla from '../usuarios/Tabla';
 
 class Usuarios extends Component {
   componentDidMount() {
-    this.props.traerTodos();
+    if (!this.props.usuarios.length) {
+      this.props.traerTodos();
+    }
   }
 
   ponerContenido = () => {
@@ -23,6 +25,7 @@ class Usuarios extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <h1>Usuarios</h1>
