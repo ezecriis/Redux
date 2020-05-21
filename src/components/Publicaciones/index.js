@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Spinner from '../general/Spinner';
 import Fatal from '../general/Fatal';
 
-import * as usuariosActions from '../../actions/usuariosActons';
+import * as usuariosActions from '../../actions/usuariosActions';
 import * as publicacionesActions from '../../actions/publicacionesActions';
 
 const { traerTodos: usuariosTraerTodos } = usuariosActions;
@@ -78,7 +78,7 @@ class Publicaciones extends Component {
         const { publicaciones_key } = usuarios[key];
 
         return publicaciones[publicaciones_key].map((publicacion) => (
-            <div className='pub_titulo'>
+            <div className='pub_titulo' key={publicacion.id} onClick= {()=> alert(publicacion.id)}>
                 <h2> {publicacion.tile} </h2>
                 <h3> {publicacion.body} </h3>
             </div>

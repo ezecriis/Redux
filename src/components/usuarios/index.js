@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as usuariosActions from '../../actions/usuariosActons';
+import * as usuariosActions from '../../actions/usuariosActions';
 import Spinner from '../general/Spinner';
 import Fatal from '../general/Fatal';
 import Tabla from '../usuarios/Tabla';
